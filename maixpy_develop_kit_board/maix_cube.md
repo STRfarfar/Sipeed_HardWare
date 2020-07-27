@@ -9,7 +9,7 @@
 
 ### 外观一览
 
-![Maix Cube](../../assets/dk_board/maix_cube/maixcube_2020-06-13_06-31-29.png)
+![maixcube_product_appearance](maix_cube.assets/maixcube_product_appearance.png)
 
 - 1.3 寸 **IPS** 屏幕: 分辨率** 240*240**
 - 复位按键
@@ -21,10 +21,9 @@
 - Type-C 接口:
 - 三向按键: 
 
-
 ### 板载功能介绍
 
-![Maix Cube](../../assets/dk_board/maix_cube/maixcube_2020-06-13_06-42-14.png)
+![maixcube_resources](maix_cube.assets/maixcube_resources.png)
 
 
 - 电源管理控制单元: AXP173
@@ -49,15 +48,15 @@ SP-MOD 即为 sipeed module, simplify PMOD, super module
 
 | 接口 | 接口描述 |
 |---|---|
-|SP-MODE 接口描述|![SP-MODE 接口描述](../../assets/module/spmod/spmod_interface_1.png)|
-|硬件接口|![硬件接口](../../assets/module/spmod/spmod_interface_2.png)|
+|SP-MODE 接口描述|![spmod_interface_1](maix_cube.assets/spmod_interface_1-1595819569921.png)|
+|硬件接口|![spmod_interface_2](maix_cube.assets/spmod_interface_2.png)|
 
 #### Grove 接口
 
 - Grove 模块接口
 
 Grove 接口的线缆有 4 种颜色, 用户可以根据颜色快速区别
-![](../../assets/module/grove/grove_interface.jpg)
+![grove_interface](maix_cube.assets/grove_interface.jpg)
 
 | --- | 颜色 | 描述 |
 | --- | --- | --- |
@@ -96,7 +95,7 @@ Grove模块主要有 4 种接口:
 
 1. Grove I2C:<br/>
     有许多类型的I2C Grove 传感器可用.<br/>MaixCube 上的 Grove 只支持 3.3V 传感器
-  
+
   Grove I2C 连接器具有标准布局.引脚 1 是SCL信号, 引脚 2 是SDA信号
 
 |pin  | Function | Note |

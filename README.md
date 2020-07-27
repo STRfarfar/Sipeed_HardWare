@@ -10,9 +10,9 @@ Summary
 
 ## K210 核心模组
 
-* [K210 核心模块](./core_modules/core_module.md)
-    - [M1/M1w](./core_modules/core_module.md)
-    - [M1n](./core_modules/core_module.md)
+* [K210 核心模块](./core_modules/k210_core_modules.md)
+    - [M1/M1w](./core_modules/k210_core_modules.md)
+    - [M1n](./core_modules/k210_core_modules.md)
 
 ## MaixPy 系列开发板
 
