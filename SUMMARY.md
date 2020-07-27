@@ -1,6 +1,3 @@
-# Sipeed_HardWare
-Sipeed_HardWare wiki
-
 Summary
 =====
 
@@ -10,7 +7,11 @@ Summary
 
 ## K210 核心模组
 
-* [K210 核心模块](./core_modules/core_module.md)
+现有四款基于 K210 开发的 AIOT 模块：M1, M1w, M1n, MF0
+
+模块相关说明及差异: 
+
+- [K210 核心模块](./core_modules/core_module.md)
     - [M1/M1w](./core_modules/core_module.md)
     - [M1n](./core_modules/core_module.md)
 
