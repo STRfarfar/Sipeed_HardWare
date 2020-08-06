@@ -1,22 +1,16 @@
-# Sipeed_HardWare
-Sipeed_HardWare wiki
+# Sipeed HardWare WIKI
 
-Summary
-=====
+[English|[中文](./README_zh.md)]
 
-## 简介
+## K210 Mocules
 
-- [关于 K210](./core_modules/core_k210.md)
-
-## K210 核心模组
-
-* [K210 核心模块](./core_modules/k210_core_modules.md)
+* [K210 Mocules](./core_modules/k210_core_modules.md)
     - [M1/M1w](./core_modules/k210_core_modules.md)
     - [M1n](./core_modules/k210_core_modules.md)
 
-## MaixPy 系列开发板
+## MaixPy Develop Kit Board
 
-* [MaixPy 开发板](./maixpy_develop_kit_board/develop_kit_board.md)
+* [MaixPy Develop Kit Board](./maixpy_develop_kit_board/develop_kit_board.md)
   - [Maix Go](./maixpy_develop_kit_board/maix_duino.md)
   - [Maix Dock](./maixpy_develop_kit_board/maix_duino.md)
   - [Maix Cube](./maixpy_develop_kit_board/maix_cube.md)
@@ -24,11 +18,24 @@ Summary
   - [Maix Bit](./maixpy_develop_kit_board/maix_duino.md)
   - [Maix Amigo](./maixpy_develop_kit_board/maix_duino.md)
 
-## 外设模组
+## MF face recognition module
 
-* [扩展接口 Grove]()
+* [MF face recognition module]()
+  - [MF0](./mf_ml_module/mf0_ml_module.md)
+  - [MF0 Dock]()
+  - [MF1](./mf_ml_module/mf1_ml_module.md)
+  - [MF2]()
+  - [MF4]()
+  - [MF5]()
+
+- [MF face recognition module Precautions](./mf_ml_module/mf_precautions.md)
+- [MF module update firmwave](./mf_ml_module/mf_update_firmwave.md)
+
+## Peripheral Module
+
+* [Grove Module]()
     - [Grove-RGB LED]()
-* [扩展接口 SP-MOD]()
+* [SP-MOD Module]()
     - [SP-TOF-1P]()
     - [SP-LCD 1.14]()
     - [SP-MicArray]()
@@ -44,10 +51,10 @@ Summary
     - [SP-Ethernet]()
 
 
-### MF 机器学习模组
+### MF 
 
-* [MF 视觉模组]()
-  - [MF0]()
-  - [MF1]()
-
+- [MF0]()
+- [MF1]()
+- [MF2]()
+- [MF5]()
 

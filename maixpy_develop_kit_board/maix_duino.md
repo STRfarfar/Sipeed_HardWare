@@ -27,6 +27,5 @@ MaixDuino 引脚图
 
 ### 资料相关链接
 
-- [MaixDuino 原理图]()
-- [MaixDuino]()
+- [MaixDuino 原理图](https://dl.sipeed.com/MAIX/HDK/Sipeed-Maixduino)
 
