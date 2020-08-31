@@ -49,7 +49,7 @@ SPMOD-BT(BLE 模块)采用 YDJ-23。
 |AT+SLEEP | 睡眠 |
 |AT+MTU | 设置模块发送的发包数长 |
 
-> 详细的AT指令列表以及用法，请参考 JDY-23 AT 指令说明
+> 详细的 AT 指令列表以及用法，请参考 JDY-23 AT 指令说明
 
 
 ###  SPMOD_XXX 模块引脚定义：
@@ -57,15 +57,14 @@ SPMOD-BT(BLE 模块)采用 YDJ-23。
 
 | 引脚序号  | 引脚名称 | 类型  | 引脚说明    |
 | -------- | -------- | ---- | ---------- |
-| 1        | GND      | G    | XX         |
-| 2        | XXX      | I    | XX         |
-| 3        | MISO     | O    | XX         |
-| 4        | XXX      | I    | XX         |
-| 5        | XXX      | O    | XX         |
-| 6        | SCK      | I    | XX         |
-| 7        | MOSI     | I    | XX         |
-| 8        | VCC      | G    | XX         |
-
+| 1        | GND      | G    | 模块电源地  |
+| 2        | AWK      | I/O  | NOTE: |
+| 3        | STA      | I/O  | 连接状态引脚，蓝牙已连接，输出高电平，未连接低电平 |
+| 4        | RX       | I    | 串口接收引脚|
+| 5        | TX       | O    | 串口发送引脚|
+| 6        | RST      | I/O  | 复位引脚，低电平有效 |
+| 7        | ---      | NC   |            |
+| 8        | VCC      | V    | 模块电源    |
 
 ## 使用例程
 
@@ -99,5 +98,3 @@ SPMOD-BT(BLE 模块)采用 YDJ-23。
 |E-mail(技术支持和商业合作) | [Support@sipeed.com](mailto:support@sipeed.com) |
 |telgram link | https://t.me/sipeed ||MaixPy AI QQ 交流群 | 878189804 |
 |MaixPy AI QQ 交流群(二群) | 1129095405 |
-
-

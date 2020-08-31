@@ -11,13 +11,13 @@
 ## MaixPy Develop Kit Board
 
 * [MaixPy Develop Kit Board](./maixpy_develop_kit_board/develop_kit_board.md)
-  - [Maix Go](./zh/maixpy_develop_kit_board/maix_go.md)
-  - [Maix Dock](./zh/maixpy_develop_kit_board/maix_dock.md)
-  - [Maix Bit](./zh/maixpy_develop_kit_board/maix_bit.md)
-  - [Maix Duino](./zh/maixpy_develop_kit_board/maix_duino.md)
-  - [Maix Cube](./zh/maixpy_develop_kit_board/maix_cube.md)
-  - [Maix Amigo](./zh/maixpy_develop_kit_board/maix_amigo.md)
-  
+  - [Maix Go](./en/maixpy_develop_kit_board/maix_go.md)
+  - [Maix Dock](./en/maixpy_develop_kit_board/maix_dock.md)
+  - [Maix Bit](./en/maixpy_develop_kit_board/maix_bit.md)
+  - [Maix Duino](./en/maixpy_develop_kit_board/maix_duino.md)
+  - [Maix Cube](./en/maixpy_develop_kit_board/maix_cube.md)
+  - [Maix Amigo](./en/maixpy_develop_kit_board/maix_amigo.md)
+
 ## MF face recognition module
 
 * [MF face recognition module]()
@@ -51,10 +51,9 @@
     - [SP-Ethernet]()
 
 
-### MF 
+### MF
 
 - [MF0]()
 - [MF1]()
 - [MF2]()
 - [MF5]()
-

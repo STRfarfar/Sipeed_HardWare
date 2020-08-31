@@ -6,6 +6,7 @@
 
 **MF 人脸识别模块** 固件、字体资源、图片资源、说明如下：
 
+
 | 类型     | 烧录地址 | 长度  | 说明 |
 | -------- | -------- | ----- | ---- |
 | 固件     | 0x000000 |       |      |
@@ -15,6 +16,8 @@
 | 板级配置 | 0x7FF000 | 4 KB  |      |
 | 人脸信息 | 0x800000 | 64 KB |      |
 |          |          |       |      |
+
+> 一般开发者在拿到 MF 模块之后，不需要关心该资源分布
 
 - MF 固件说明
 
@@ -28,9 +31,6 @@
 
 - 字体资源
 - 图片资源
-
-
-
 
 
 ## MF 固件烧录(升级，还原出厂配置)步骤
@@ -52,17 +52,17 @@
 
   - 烧录软件： kflash_gui(这里使用 kflash_gui v1.6.5 版本)
 
-    - 下载链接: 
-      - Github: [kflash_gui](https://github.com/Sipeed/kflash_gui)
-        - Sipeed: [Sipeed 官方下载站 - kflash_gui](https://dl.sipeed.com/MAIX/tools/kflash_gui/kflash_gui_v1.6.5)
+    下载链接:
+    - Github: [kflash_gui](https://github.com/Sipeed/kflash_gui)
+    - Sipeed: [Sipeed 官方下载站 - kflash_gui](https://dl.sipeed.com/MAIX/tools/kflash_gui/kflash_gui_v1.6.5)
 
   - 烧录资源文件(根据情况烧录)：**MF 人脸识别模块固件**、算法模型文件、字体资源文件、图片资源文件
-    	 
 
-    - 资源文件获取统一发送邮件到: Email: Support@sipeed.com
-      	 
+
+    资源文件获取统一发送邮件到: Email: Support@sipeed.com
+    
       推荐发送邮件格式如下:
-
+    
       > 问题类型: [MF 固件资源获取]
       >
       > 使用硬件/固件版本: [MF0/MF1/MF2/MF4/MF5]
@@ -71,21 +71,20 @@
       >
       > 机器码: [xxxxxxxxxxxxxxxxxxxxx(只有模型丢失时需要)]
 
-      
 
 ### 烧录固件,资源文件
 
 使用USB Type-C 数据线 将**MF 人脸识别模块** 连接 电脑
 
-![image-20200806105515925](../assets/mf_module/mf1/image-20200806105515925.png)
+![MF1 connect USB](../../assets/mf_module/mf1/image-20200806105515925.png)
 
 打开 Kflash_gui 选择需要烧录的文件，选择版型(默认选择`自动选择`， 如果烧录失败则选择 `MaixDuino`)，选择串口号(CH522 有两个串口，失败则尝试另外一个)，配置波特率(默认选择 `150000`, 如果烧录失败则适当减低波特率,如 `115200`)
 
-![image-20200806103433410](../assets/kflash_gui/image-20200806103433410.png)
+![image-20200806103433410](../../assets/kflash_gui/image-20200806103433410.png)
 
 
 
-![image-20200806105056527](../assets/kflash_gui/image-20200806105056527.png)
+![image-20200806105056527](../../assets/kflash_gui/image-20200806105056527.png)
 
 ## 怎么获取 Key(机器码)
 
@@ -105,8 +104,16 @@
 轻点 `DTR` ,再松开,即可使模块复位,看到启动信息
 
 <center class="half">
-<img src="../assets/other/how_to_get_key.png" height = 50% width = 80% />
+<img src="../../assets/other/how_to_get_key.png" height = 50% width = 80% />
 </center>
 
 
+## MF 固件横竖版说明
 
+由于采用的摄像头成像方向不同，故有横竖版两种固件；
+
+如何确认摄像头对应的固件：（通过摄像头丝印区分）
+
+| 横板 | 竖版 |
+| --- | --- |
+| ![](../../assets/mf_module/mf1/mf_dual_camera_1.jpg) | ![](../../assets/mf_module/mf1/mf_dual_camera_2.png) |
