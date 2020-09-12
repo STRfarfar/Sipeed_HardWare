@@ -1,6 +1,6 @@
 # Sipeed HardWare WIKI
 
-[[English](./README.md)|中文]
+[[English](./README_en.md)|中文]
 
 ## K210 核心模组
 
