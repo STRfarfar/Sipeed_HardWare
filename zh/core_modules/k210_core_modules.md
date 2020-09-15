@@ -34,6 +34,27 @@ M1n: https://dl.sipeed.com/MAIX/HDK/Sipeed-M1n
 
 MF0: https://dl.sipeed.com/MAIX/HDK/Sipeed-MF0/MF0-2802
 
+## M1/M1W(k210) ISP 模式(烧录模式)
+
+ **IO_16** 用于 **boot** 模式选择，上电时，拉高进入 **Flash** 启动，拉低进入 **ISP** 模式
+
+- Boot 选择
+
+  | Boot 选择引脚 | 拉高       | 拉低     |
+  | ------------- | ---------- | -------- |
+  | IO_16         | Flash 启动 | ISP 模式 |
+
+
+- 参考自动进入下载模式电路：
+
+![](../../assets/mf_module/m1_m1w/K210_boot_reference.png)
+
+
+> 《K210技术规格书 v0.1.5》：
+    2.5 特殊引脚
+    > IO_16 用于 boot 模式选择，上电复位时，拉高进入 FLASH 启动，拉低进入 ISP 模式。复位后，IO_0、
+    IO_1、IO_2、IO_3 为 JTAG 引脚。IO_4、IO_5 为 ISP 引脚。
+
 ## 注意事项
 
 > 针对于硬件工程师在设计自己的 PCB 时, 需要注意的事项如下：
