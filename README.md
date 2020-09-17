@@ -8,17 +8,10 @@
     - [M1/M1w](./zh/core_modules/k210_core_modules.md)
     - [M1n](./zh/core_modules/k210_core_modules.md)
 
-## MaixPy 系列开发板
-
-* [MaixPy 开发板](./zh/maixpy_develop_kit_board/develop_kit_board.md)
-  - [Maix Go](./zh/maixpy_develop_kit_board/maix_go.md)
-  - [Maix Dock](./zh/maixpy_develop_kit_board/maix_dock.md)
-  - [Maix Bit](./zh/maixpy_develop_kit_board/maix_bit.md)
-  - [Maix Duino](./zh/maixpy_develop_kit_board/maix_duino.md)
-  - [Maix Cube](./zh/maixpy_develop_kit_board/maix_cube.md)
-  - [Maix Amigo](./zh/maixpy_develop_kit_board/maix_amigo.md)
 
 ## MF 人脸识别模块
+
+> MF 系类产品针对商业
 
 * [MF 人脸识别模块]()
   - [MF0](./zh/mf_ml_module/mf0_ml_module.md)
@@ -31,8 +24,43 @@
 - [MF 人脸识别模块 PCB 设计注意事项](./zh/mf_ml_module/mf_precautions.md)
 - [MF 更新固件说明](./zh/mf_ml_module/mf_update_firmwave.md)
 
+-----
 
-## 外设模组
+
+## MaixPy 系列开发板
+
+* [MaixPy 开发板](./zh/maixpy_develop_kit_board/develop_kit_board.md)
+  - [Maix Go](./zh/maixpy_develop_kit_board/maix_go.md)
+  - [Maix Dock(M1/M1W)](./zh/maixpy_develop_kit_board/maix_dock.md)
+  - [Maix Bit](./zh/maixpy_develop_kit_board/maix_bit.md)
+  - [Maix Duino](./zh/maixpy_develop_kit_board/maix_duino.md)
+  - [Maix Nano](./zh/maixpy_develop_kit_board/maix_nano.md)
+  - [Maix Cube](./zh/maixpy_develop_kit_board/maix_cube.md)
+  - [Maix Amigo](./zh/maixpy_develop_kit_board/maix_amigo.md)
+
+
+
+## LicheePi (Linux)
+
+LicheePi Zero
+
+- [LicheePi Zero]()
+- [LicheePi Zero Plus]()
+
+- [LicheePi Nano]()
+
+## Lichee Tang(FPGA)
+
+- [Lichee Tang Primer]()
+- [Lichee Tang Nano]()
+
+## Longan (MCU)
+
+- [longan Nano]()
+
+-----
+
+### MaixPy 外设模块
 
 * [扩展接口 Grove]()
     - [Grove-RGB LED]()
@@ -45,8 +73,31 @@
     - [SP-LoRa]()
     - [SP-Servo]()
     - [SP-RFID]()
-    - [SP-BLE]()
+    - [SP-BLE](./zh/modules_spmod/spmod_bt.md)
     - [SP-elink]()
     - [SP-PSRAM]()
     - [SP-elink]()
     - [SP-Ethernet]()
+
+
+## 模块&&调试器
+
+### 调试器
+
+- [Sipeed RV Debugger]()
+- [双串口 USB 模块]()
+
+### 模块
+
+- Camera(Sensor)
+    - [OV2640]()
+    - [OV2640-M12]()
+    - [单摄像头模块(GC0328)]()
+    - [双摄像头模块(GC0328)]()
+    - [OV7740]()
+
+- [麦克风模块]()
+  - [单麦克风模块]()
+  - [麦克风阵列]()
+
+- [LCD 1.3/2.4/2.8/4.3/5 寸]()
