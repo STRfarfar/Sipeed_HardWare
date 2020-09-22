@@ -8,7 +8,6 @@
     - [M1/M1w](./zh/core_modules/k210_core_modules.md)
     - [M1n](./zh/core_modules/k210_core_modules.md)
 
-
 ## MF 人脸识别模块
 
 > MF 系类产品针对商业
@@ -16,10 +15,8 @@
 * [MF 人脸识别模块]()
   - [MF0](./zh/mf_ml_module/mf0_ml_module.md)
   - [MF0 Dock]()
-  - [MF1](./zh/mf_ml_module/mf1_ml_module.md)
-  - [MF2]()
-  - [MF4]()
-  - [MF5]()
+  - [MF1 && MF2](./zh/mf_ml_module/mf1_ml_module.md)
+  - [MF4 && MF5](./zh/mf_ml_module/mf5_product.md)
 
 - [MF 人脸识别模块 PCB 设计注意事项](./zh/mf_ml_module/mf_precautions.md)
 - [MF 更新固件说明](./zh/mf_ml_module/mf_update_firmwave.md)
@@ -90,9 +87,11 @@ LicheePi Zero
 ### 模块
 
 - Camera(Sensor)
+
     - [OV2640]()
     - [OV2640-M12]()
-    - [单摄像头模块(GC0328)]()
+    - [双摄像头模块(OV2640)]()
+    - [GC0328]()
     - [双摄像头模块(GC0328)]()
     - [OV7740]()
 
@@ -101,3 +100,14 @@ LicheePi Zero
   - [麦克风阵列]()
 
 - [LCD 1.3/2.4/2.8/4.3/5 寸]()
+
+
+==================
+
+
+种类:(芯片关键资源, 电气参数)
+  SOC(/MCU): F1C100S, V3S, K210
+  FPGA: EG4S20BG256, GW1N-1
+  MCU: GD32, CH552
+
+  K210 核心模块: M1/M1W, M1n,

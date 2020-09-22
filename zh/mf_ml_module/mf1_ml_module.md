@@ -41,5 +41,4 @@
 ## **功能简介**
 
 
-![image-20200806105515925](../../assets/mf_module/mf1/image-20200806105515925.png)
-![image-20200806105515925](../../assets/mf_module/mf1/Snipaste_2020-08-06_16-32-28.png)
+![MF1 引脚图](../../assets/mf_module/mf1/mf1_pin_map.png)

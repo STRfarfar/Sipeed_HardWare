@@ -76,7 +76,7 @@
 
 使用USB Type-C 数据线 将**MF 人脸识别模块** 连接 电脑
 
-![MF1 connect USB](../../assets/mf_module/mf1/image-20200806105515925.png)
+![MF1 connect USB](../../assets/mf_module/mf1/mf1_view.png)
 
 打开 Kflash_gui 选择需要烧录的文件，选择版型(默认选择`自动选择`， 如果烧录失败则选择 `MaixDuino`)，选择串口号(CH522 有两个串口，失败则尝试另外一个)，配置波特率(默认选择 `150000`, 如果烧录失败则适当减低波特率,如 `115200`)
 
@@ -97,7 +97,7 @@
 
 > **[kflash_gui](https://github.com/Sipeed/kflash_gui/releases)** 为 K210 固件烧录工具, 源码: [**Sipeed/kflash_gui**](https://github.com/Sipeed/kflash_gui)
 
-建议使用 [`XCOM`](tools/XCOM_V2.2.exe) 来看串口信息
+建议使用 [`XCOM`](tools/XCOM_V2.6.exe) 来看串口信息
 
 轻点 `DTR` ,再松开,即可使模块复位,看到启动信息
 
