@@ -21,7 +21,7 @@
 - Grove 接口: 板载 3 个**Grove** 数字接口, 传感器,控制器扩展无限可能~
 - SP-MOD 接口: 板载 3 个更加强大,更高扩展性的 **SP-MOD** 数字接口, I2C,SPI(标准,双线,四线模式)等接口均可以使用
   - 后续支持乐高手柄功能
-- TF 卡槽: 多媒体资源扩展,支持大容量储存 
+- TF 卡槽: 多媒体资源扩展,支持大容量储存
 - 摄像头: 搭载 **OV7740** **30W** 像素 与 **GC0328 30W 像素** **Sensor**
 - Type-C 接口: USB-TypeC 电源、调试接口,正反盲插
 
@@ -69,36 +69,36 @@ Grove模块主要有 4 种接口:
 
 |pin  |Function | Note |
 | ---|---|---|
-|pin1 | Dn 第一个数字输入 |
-|pin2 | Dn+1 第二个数字输入 |
-|pin3 | VCC 供电引脚 5V/3.3V |
-|pin4 | GND 地 |
+| pin1 | Dn 第一个数字输入 |
+| pin2 | Dn+1 第二个数字输入 |
+| pin3 | VCC 供电引脚 5V/3.3V |
+| pin4 | GND 地 |
 
 
 1. Grove UART :<br/>
     The Grove UART 是特殊的一种数字输入输出接口.<br/>
     它使用引脚 1 和引脚 2 进行串行输入和发送. <br/>
-    引脚1是 RX 线(用于接收数据, 因此是输入), 
+    引脚1是 RX 线(用于接收数据, 因此是输入),
     其中引脚 2 是 TX 线(用于向 Grove 模块传输数据).
 
-|pin  |Function|Note|
+| pin  | Function | Note |
 | ---|---|---|
-|pin1 |RX|串行接收|
-|pin2 |TX|串行发送|
-|pin3 |VCC|供电引脚 5V/3.3V|
-|pin4 |GND |地|
+| pin1 | RX|串行接收 |
+| pin2 | TX|串行发送 |
+| pin3 | VCC|供电引脚 5V/3.3V |
+| pin4 | GND | 地 |
 
 1. Grove I2C:<br/>
     有许多类型的 I2C Grove 传感器可用.<br/>MaixAmigo 上的 Grove 只支持 3.3V 传感器
 
   Grove I2C 连接器具有标准布局.引脚 1 是SCL信号, 引脚 2 是SDA信号
 
-|pin  | Function | Note |
+| pin  | Function | Note |
 | ---|---|---|
-|pin1 | SCL |I2C 时钟 |
-|pin2 | SDA |I2C 数据 |
-|pin3 | VCC |供电引脚, 5V/3.3V |
-|pin4 | GND |地 |
+| pin1 | SCL | I2C 时钟 |
+| pin2 | SDA | I2C 数据 |
+| pin3 | VCC | 供电引脚, 5V/3.3V |
+| pin4 | GND | 地 |
 
 ### 板载 I2C 设备
 
@@ -106,7 +106,7 @@ MaixAmigo 板载 I2C 传感器/IC
 
 | IC | 设备 id | I2C 地址(7位地址) |配置：SCL: IO_24, SDA: IO_27|
 | --- | --- | --- | --- |
-|---|I2C Address| <<1|MaixPy 读取地址|
-|ES8374|0x08|0x10|D(16)|
-|MSA301|0x13|0x26|D(38)|
-|AXP173|0x68|0x34|D(52)|
+| --- | I2C Address | <<1|MaixPy 读取地址 |
+| ES8374 | 0x08 | 0x10 | D(16) |
+| MSA301 | 0x13 | 0x26 | D(38) |
+| AXP173 | 0x68 | 0x34 | D(52) |
