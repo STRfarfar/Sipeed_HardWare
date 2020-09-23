@@ -12,21 +12,19 @@
 ## MF face recognition module
 
 * [MF face recognition module]()
-  - [MF0](./mf_ml_module/mf0_ml_module.md)
-  - [MF0 Dock]()
-  - [MF1](./mf_ml_module/mf1_ml_module.md)
-  - [MF2]()
-  - [MF4]()
-  - [MF5]()
+  - [MF0 && MF0 Dock](./en/mf_ml_module/mf0_ml_module.md)
+  - [MF1 && MF2](./en/mf_ml_module/mf1_ml_module.md)
+  - [MF4 && MF5](./en/mf_ml_module/mf5_product.md)
+
 
 - [MF face recognition module Precautions](./mf_ml_module/mf_precautions.md)
-- [MF module update firmwave](./mf_ml_module/mf_update_firmwave.md)
+- [MF module update firmwave](./en/mf_ml_module/mf_update_firmwave.md)
 
 -----
 
 ## MaixPy Develop Kit Board
 
-* [MaixPy Develop Kit Board](./maixpy_develop_kit_board/develop_kit_board.md)
+* [MaixPy Develop Kit Board](./en/maixpy_develop_kit_board/develop_kit_board.md)
   - [Maix Go](./en/maixpy_develop_kit_board/maix_go.md)
   - [Maix Dock](./en/maixpy_develop_kit_board/maix_dock.md)
   - [Maix Bit](./en/maixpy_develop_kit_board/maix_bit.md)
