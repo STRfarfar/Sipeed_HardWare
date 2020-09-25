@@ -43,8 +43,8 @@ MF0: https://dl.sipeed.com/MAIX/HDK/Sipeed-MF0/MF0-2802
   | ISP 引脚 | 描述       | 备注     |
   | ------------- | ---------- | -------- |
   | BOOT (IO_16)         | 启动模式选择 | 低电平进入，ISP 模式 |
-  | ISP_TX (IO_4)         | ISP 串口数据发送 |  |
-  | ISP_RX (IO_5)         | ISP 串口数据接收 |  |
+  | ISP_RX (IO_4)         | ISP 串口数据接收 |  |
+  | ISP_TX (IO_5)         | ISP 串口数据发送 |  |
 
 - Boot 选择
 
