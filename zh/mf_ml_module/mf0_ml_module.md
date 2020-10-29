@@ -87,8 +87,8 @@ MF0 硬件连接：
 | --- | --- | --- | --- |
 | 1 | 5V | VIN | --- |
 | 2 | GND | GND | --- |
-| 3 | RX | IO4 | --- |
-| 4 | TX | IO5 | --- |
+| 3 | TX | IO4 | --- |
+| 4 | RX | IO5 | --- |
 | 5 | DTR | BOOT | --- |
 | 6 | RTS | RST | --- |
 
@@ -102,8 +102,8 @@ MF0 Dock 硬件连接：
 | --- | --- | --- | --- |
 | 1 | 5V | VIN | --- |
 | 2 | GND | GND | --- |
-| 3 | RX | IO4 | --- |
-| 4 | TX | IO5 | --- |
+| 3 | TX | IO4 | --- |
+| 4 | RX | IO5 | --- |
 
 ![](../../assets/mf_module/mf0_mf0dock/mf0_dock_flash.png)
 
