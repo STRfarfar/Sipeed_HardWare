@@ -32,7 +32,7 @@
   - [Maix Duino](./zh/maixpy_develop_kit_board/maix_duino.md)
   - [Maix Nano](./zh/maixpy_develop_kit_board/maix_nano.md)
   - [Maix Cube](./zh/maixpy_develop_kit_board/maix_cube.md)
-  - [Maix Amigo](./zh/maixpy_develop_kit_board/maix_amigo.md)
+  - [Maix Amigo](./zh/maixpy_develop_kit_board/maix_Amigo.md)
 
 
 
