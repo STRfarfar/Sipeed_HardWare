@@ -20,7 +20,7 @@ MaixAmigo integrates front and rear cameras, TF card slots, user buttons, TFT di
 - Grove interface: Onboard 3 Grove digital interfaces, sensors and controllers have unlimited possibilities for expansion
 - SP-MOD interface: Onboard 3 more powerful and more scalable SP-MOD digital interfaces, I2C, SPI (standard, two-wire, four-wire mode) and other interfaces can be used
 
-  - 后续支持乐高手柄功能 (Translates to "Later support Lego handle function", but that doesn't make sense)
+- Support gamepad
 - TF card slot: multimedia resource expansion, supports large-capacity storage
 - Camera: Equipped with **OV7740 30W** pixel and **GC0328 30W pixel Sensor**
 - Type-C interface: USB-TypeC power supply, debugging interface, blind plug
