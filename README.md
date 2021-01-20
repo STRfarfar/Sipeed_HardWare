@@ -61,19 +61,26 @@ LicheePi Zero
 * [扩展接口 Grove]()
     - [Grove-RGB LED]()
 * [扩展接口 SP-MOD]()
-    - [SP-TOF-1P](./zh/modules_spmod/spmod_tof.md)
-    - [SP-LCD 1.14](./zh/modules_spmod/spmod_lcd1.14.md)
-    - [SP-MicArray](./zh/modules_spmod/spmod_micarray.md)
-    - [SP-Weather](./zh/modules_spmod/spmod_weather.md)
-    - [SP-JoyStick](./zh/modules_spmod/spmod_joystick.md)
-    - [SP-LoRa](./zh/modules_spmod/spmod_lora.md)
-    - [SP-Servo](./zh/modules_spmod/spmod_servo.md)
-    - [SP-RFID](./zh/modules_spmod/spmod_rfid.md)
-    - [SP-BLE](./zh/modules_spmod/spmod_bt.md)
-    - [SP-Eink](./zh/modules_spmod/spmod_eink.md)
-    - [SP-PSRAM](./zh/modules_spmod/spmod_psram.md)
-    - [SP-Ethernet](./zh/modules_spmod/spmod_ethernet.md)
-
+    - 转接板类
+      - [SP-Extender](./zh/modules_spmod/spmod_extender.md)
+      - [SP-Grove](./zh/modules_spmod/spmod_grove.md)
+      - [SP-FPC](./zh/modules_spmod/spmod_fpc.md)
+      - [SP-MicArray](./zh/modules_spmod/spmod_micarray.md)
+      - [SP-JoyStick](./zh/modules_spmod/spmod_joystick.md)
+      - [SP-Servo](./zh/modules_spmod/spmod_servo.md)
+      - [SP-Type-C]()
+    - 传感器类
+      - [SP-Weather](./zh/modules_spmod/spmod_weather.md)
+      - [SP-TOF-1P](./zh/modules_spmod/spmod_tof.md)
+    - 通信类
+      - [SP-BLE](./zh/modules_spmod/spmod_bt.md)
+      - [SP-LoRa](./zh/modules_spmod/spmod_lora.md)
+      - [SP-PSRAM](./zh/modules_spmod/spmod_psram.md)
+      - [SP-RFID](./zh/modules_spmod/spmod_rfid.md)
+      - [SP-Ethernet](./zh/modules_spmod/spmod_ethernet.md)
+    - 显示类
+      - [SP-LCD 1.14](./zh/modules_spmod/spmod_lcd1.14.md)
+      - [SP-Eink](./zh/modules_spmod/spmod_eink.md)
 
 ## 模块&&调试器
 
