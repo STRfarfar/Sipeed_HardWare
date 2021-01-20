@@ -3,9 +3,9 @@
 
 ## 概述
 
-<img src="../../assets/spmod/sipeed_spmod_bt.jpg" alt="XXX" style="zoom:60%;" />
+<img src="../../assets/spmod/spmod_bt/sp_bt.png" alt="XXX" style="zoom:40%;" />
 
-SPMOD-BT(BLE 模块)采用 YDJ-23。
+SPMOD-BT(蓝牙 模块)采用 YDJ-23。
 
 ## SPMOD - BLE 介绍
 
@@ -15,7 +15,7 @@ SPMOD-BT(BLE 模块)采用 YDJ-23。
 - 板载两个状态指示LED，模块状态一目了然
 - 模块尺寸：25.6\*20.2\*3.2mm
 
-### JDY-23 蓝牙介绍
+### JDY-23 蓝牙介绍：
 
 
 | 功能特点： | 参数 |
@@ -34,8 +34,33 @@ SPMOD-BT(BLE 模块)采用 YDJ-23。
 | 深度睡眠电流：| 9uA （无广播） |
 | 默认串口波特率：| 9600 |
 
+### SPMOD_BT 模块引脚定义：
 
-- 主要 AT 指令列表
+| 引脚序号 | 引脚名称 | 类型 | 引脚说明 |
+| -------- | -------- | ---- | --- |
+| 1 | GND | G | 模块电源地 |
+| 2 | AWK | I/O | 模块休眠唤醒引脚，低有效 |
+| 3 | STA | I/O | 蓝牙连接状态连接，连接成功时输出高电平 |
+| 4 | RX | I | 模块UART数据接受引脚，连接上位机TX |
+| 5 | 3V3 | V | 模块电源输入正 |
+| 6 | --- | NC | 悬空引脚，无功能 |
+| 7 | RST | I/O | 模块复位引脚，低电平有效 |
+| 8 | TX  | O | 模块UART数据发送引脚，连接上位机的RX |
+
+<img src="../../assets/spmod/spmod_bt/back.jpg" height="250" />
+
+- 接线方式：
+
+| MCU:FUN(IO) | SP_BT |
+| :---------: | :---: |
+| UART:TX(IO_7) | RX |
+| USRT:RX(IO_6) | TX |
+| 1.8-3.3V | 3.3V |
+| GND | GND |
+
+<img src="../../assets/spmod/spmod_bt/connection.png" height="250">
+
+### 主要 AT 指令列表：
 
 | 指令 | 描述 |
 | --- | --- |
@@ -49,39 +74,94 @@ SPMOD-BT(BLE 模块)采用 YDJ-23。
 |AT+SLEEP | 睡眠 |
 |AT+MTU | 设置模块发送的发包数长 |
 
-> 详细的 AT 指令列表以及用法，请参考 JDY-23 AT 指令说明
-
-
-###  SPMOD_XXX 模块引脚定义：
-
-
-| 引脚序号  | 引脚名称 | 类型  | 引脚说明    |
-| -------- | -------- | ---- | ---------- |
-| 1        | GND      | G    | 模块电源地  |
-| 2        | AWK      | I/O  | NOTE: |
-| 3        | STA      | I/O  | 连接状态引脚，蓝牙已连接，输出高电平，未连接低电平 |
-| 4        | RX       | I    | 串口接收引脚|
-| 5        | TX       | O    | 串口发送引脚|
-| 6        | RST      | I/O  | 复位引脚，低电平有效 |
-| 7        | ---      | NC   |            |
-| 8        | VCC      | V    | 模块电源    |
+*更多AT指令请参考[JDY-23-V2.1.pdf](https://cn.dl.sipeed.com/shareURL/MAIX/HDK/sp_mod/sp_bt)*
 
 ## 使用例程
 
-- MaixPy 例程：
+* 流程
+  1. 发送 AT 指令
+  2. 接收数据
+  3. 判断是否设置成功
 
-> NOTE: 待更新
+### C 示例：
 
-- STM32 例程：
+  ```c
+  // set uart rx/tx func to io_6/7
+  fpioa_set_function(6, FUNC_UART1_RX + UART_NUM * 2);
+  fpioa_set_function(7, FUNC_UART1_TX + UART_NUM * 2);
+  uart_init(UART_DEVICE_1);
+  uart_configure(UART_DEVICE_1, 9600, 8, UART_STOP_1, UART_PARITY_NONE);
 
-> NOTE: 待更新
+  //change the name of sp_bt module to MAIXCUBE
+  uart_send_data(UART_NUM, "AT+NAMEMAIXCUBE\r\n", strlen("AT+NAMEMAIXCUBE\r\n")); //send AT order
+  msleep(100);
+  ret = uart_receive_data(UART_NUM, rcv_buf, sizeof(rcv_buf)); //receive response
+  if(ret != 0 && strstr(rcv_buf, "OK"))
+  {
+     printk(LOG_COLOR_W "set name success!\r\n");
+  }
+
+  // get the name of sp_bt module
+  uart_send_data(UART_NUM, "AT+NAME\r\n", strlen("AT+NAME\r\n")); //send AT order
+  msleep(100);
+  ret = uart_receive_data(UART_NUM, rcv_buf, sizeof(rcv_buf)); //receive response
+  if(ret != 0 && strstr(rcv_buf, "NAME"))
+  {
+     printk(LOG_COLOR_W "get name success!\r\n");
+  }
+  ```
+
+### MaixPy 例程：
+
+  ```python
+    # set uart rx/tx func to io_6/7
+  fm.register(6,fm.fpioa.UART1_RX)
+  fm.register(7,fm.fpioa.UART1_TX)
+  uart = UART(UART.UART1,9600,8,1,0,timeout=1000, read_buf_len=4096)
+
+  #change the name of sp_bt module to MAIXCUBE
+  uart.write("AT+NAMEMAIXCUBE\r\n") #send AT order
+  time.sleep_ms(100)
+  read_data = uart.read() #receive response
+  if read_data:
+      read_str = read_data.decode('utf-8')
+      count = read_str.count("OK")
+      if count != 0:
+          uart.write("set name success\r\n")
+
+  # get the name of sp_bt module
+  uart.write("AT+NAME\r\n") #send AT order
+  time.sleep_ms(100)
+  read_data = uart.read() #receive response
+  if read_data:
+      read_str = read_data.decode('utf-8')
+      count = read_str.count("NAME")
+      if count != 0:
+          uart.write("get name success\r\n")
+  ```
+
+*注意发送AT指令后一定要加上\r\n*
+
+### 运行结果:
+
+  使用[BLE Utility](../../tools/bledebugger.apk)连接设备后进行收发测试结果如下:
+
+  <center class="third">
+      <img src="../../assets/spmod/spmod_bt/res.png" height="250"/><img src="../../assets/spmod/spmod_bt/res1.png" height="250"/>
+  </center>
+
+### 运行环境:
+
+  |  语言  |  开发板  | SDK/固件版本                   |
+  | :----: | :------: | :----------------------------- |
+  |   C    | MaixCube | kendryte-standalone-sdk v0.5.6 |
+  | MaixPy | MaixCube | maixpy v0.5.1                  |
 
 ## 参考设计
 
+- SPMOD_BLE 尺寸图：
 
-- SPMOD_XXX 原理图：
-
------
+<img src="../../assets/spmod/spmod_bt/sipeed_spmod_bt.png" height="250" />
 
 ## 资源链接
 
