@@ -30,7 +30,7 @@
   - [Maix Bit](./en/maixpy_develop_kit_board/maix_bit.md)
   - [Maix Duino](./en/maixpy_develop_kit_board/maix_duino.md)
   - [Maix Cube](./en/maixpy_develop_kit_board/maix_cube.md)
-  - [Maix Amigo](./en/maixpy_develop_kit_board/maix_amigo.md)
+  - [Maix Amigo](./en/maixpy_develop_kit_board/maix_Amigo.md)
 
 
 ## LicheePi (Linux)
