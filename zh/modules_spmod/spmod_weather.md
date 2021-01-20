@@ -3,7 +3,7 @@
 
 ## 概述
 
-<img src="../../assets/spmod/sipeed_spmod_weather.jpg" alt="SPMOD - Weather" style="zoom:60%;" />
+<img src="../../assets/spmod/spmod_weather/demo.gif" align="right" width="500" />
 
 SPMOD - Weather (气象站模块), 集成三轴传感器 QMC7983,与温湿度气压传感器 BME280。
 
@@ -17,7 +17,7 @@ SPMOD - Weather (气象站模块), 集成三轴传感器 QMC7983,与温湿度气
 - 磁性传感器：QMC7983是一个内置灵敏度补偿与NTC的三轴磁性传感器，I2C接 输出（最高频率400KHz），具有出色的动态范围和精度以及超低的功耗
 - 磁感应量程：±30 高斯
 - 温湿度气压传感器：BME280是同时集成了温湿度与气压传感器的数字传感器
-- 模块尺寸：25.0\*XX.X\*XX.Xmm
+- 模块尺寸：25.0\*10\*2.9mm
 
 
 ## 传感器特性：
@@ -32,6 +32,7 @@ SPMOD - Weather (气象站模块), 集成三轴传感器 QMC7983,与温湿度气
 | RMS 噪声：| 2 mG |
 | 对外接口： |I2C，默认地址 0x2C,可通过选择电阻调节 |
 
+-----
 
 | 温湿度气压传感器： | BME280 |
 | --- | --- |
@@ -47,39 +48,98 @@ SPMOD - Weather (气象站模块), 集成三轴传感器 QMC7983,与温湿度气
 | | 偏移温度系数 ±1.5 Pa/K，等效温度变化 1°C 时达到海拔 ±12.6 cm1s |
 | 对外接口： |I2C，默认地址 0x76, 可通过选择电阻调节 |
 
-###  SPMOD_XXX 模块引脚定义：
-
+###  SPMOD_Weather 模块引脚定义：
 
 | 引脚序号 | 引脚名称 | 类型 | 引脚说明      |
 | -------- | -------- | ---- | ------------- |
-| 1        | GND      | G    | 模块电源地    |
-| 2        | ---      | NC   |               |
-| 3        | ---      | NC   |               |
-| 4        | SDA      | I/O  | I2C 数据线    |
-| 5        | SCL      | I    | I2C 时钟线    |
-| 6        | ---      | NC   |               |
-| 7        | ---      | NC   |               |
-| 8        | VCC      | V    | 模块电源 3.3V |
+| 1  | GND | G   | 模块电源地 |
+| 2  | NC | NC   | 悬空引脚，无功能 |
+| 3  | NC | NC   | 悬空引脚，无功能 |
+| 4  | SDA | I/O  | 模块I2C串行数据引脚 |
+| 5  | 3V3 | V   | 模块电源输入正 |
+| 6  | NC | NC   | 悬空引脚，无功能 |
+| 7  | NC | NC   | 悬空引脚，无功能 |
+| 8  | SCL | I   | 模块I2C串行时钟引脚 |
 
-> I/O 表示信号输入/输出(以模块视角)
->
-> V/G 表示电源 VCC/GND
->
-> NC 表示该引脚无电气连接
+<img src="../../assets/spmod/spmod_weather/back.png" width="300" />
+
+## 接线方式
+
+<img src="../../assets/spmod/spmod_weather/connection.png" height="250">
+
+|  MCU:FUN(IO)  | SP_RFID |
+| :-----------: | :-----: |
+| I2C:SDA(IO_7) |   SDA   |
+|   NC(IO_15)   |   NC    |
+|   NC(IO_20)   |   IRQ   |
+|   NC(IO_21)   |   NC    |
+| GPIOHS(IO_8)  |   SHT   |
+| I2C:SCL(IO_6) |   SCL   |
+|   2.8~3.5V    |  3.3V   |
+|      GND      |   GND   |
 
 ## 使用例程
 
-- MaixPy 例程：
+* 流程
+  1. 初始化  weather=SPWeather(i2c=i2c_bus) # create sp_weather
+    while 1:
+        time.sleep_ms(500)
+        print(weather.qmc_read_xyz) # QMC7983 read data
+        print(weather.bme_values) # BME280 read data
+  2. 校准(可选)
+  3. 读取距离(多种模式可选)
 
-> NOTE: 待更新
+### C 示例：
 
-- STM32 例程：
+  ```c
+
+    fpioa_set_function(Weather_SCL, FUNC_I2C0_SCLK + Weather_I2C_DEVICE * 2); // Weather_SCL: 6;
+    fpioa_set_function(Weather_SDA, FUNC_I2C0_SDA + Weather_I2C_DEVICE * 2); // Weather_SDA: 7;
+
+    maix_i2c_init(Weather_I2C_DEVICE, 7, 400000); // Weather_I2C_DEVICE: 0;
+
+    rslt = qmc_init(); // Magnetic sensor QMC7983 init
+    rslt = bme280_init(&dev); // Temperature, humidity and pressure sensors BME280 init
+    stream_sensor_data_normal_mode(&dev); // read and print sensor data
+
+  ```
+
+### MaixPy 例程：
+
+  ```python
+
+    i2c_bus = I2C(I2C.I2C0, freq=100*1000, scl=6, sda=7) # scl: io_6, sda: io_7
+
+    weather=SPWeather(i2c=i2c_bus) # create sp_weather
+    while 1:
+        time.sleep_ms(500)
+        print(weather.qmc_read_xyz) # QMC7983 read data
+        print(weather.bme_values) # BME280 read data
+
+  ```
+
+## 运行环境
+
+|  语言  |  开发板  | SDK/固件版本                   |
+| :----: | :------: | :----------------------------- |
+|   C    | MaixCube | kendryte-standalone-sdk v0.5.6 |
+| MaixPy | MaixCube | maixpy v0.5.1                  |
+
+## 运行结果
+
+* C
+
+    <img src="../../assets/spmod/spmod_weather/log_c.png" height="200">
+
+* MaixPy
+
+    <img src="../../assets/spmod/spmod_weather/log_py.png" height="200">
 
 ## 参考设计
 
+- SPMOD_Weather 尺寸图：
 
-- SPMOD_XXX 原理图：
-
+<img src="../../assets/spmod/spmod_weather/sipeed_spmod_weather.png" height="250" />
 
 -----
 
