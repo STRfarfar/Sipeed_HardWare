@@ -38,8 +38,6 @@
 
 ## LicheePi (Linux)
 
-LicheePi Zero
-
 - [LicheePi Zero]()
 - [LicheePi Zero Plus]()
 
