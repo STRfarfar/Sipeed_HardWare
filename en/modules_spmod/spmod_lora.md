@@ -1,55 +1,55 @@
 # SPMOD - LoRa
 
 
-## 概述
+## Overview
 
 <img src="../../assets/spmod/spmod_lora/sp_lora.png" align="right" width="" height="500" />
 
-SPMOD_LoRa(LoRa 模块)采用 M-XL8 模块。
+SPMOD_LoRa(LoRa Module) uses M-XL8 module.
 
-## SPMOD - LoRa 介绍
+## SPMOD - LoRa Introduction
 
-- 采用 **Sipeed-SPMOD** 接口(2.54mm * 8PIN 排针)，统一 MaixPy 开发板接口
-- 利用 SP-MOD SPI 和 LoRa 模块通讯
-- LoRa 模块：M-XL8 SX1276 模块是一个 SPI 接口，内置 LoRaTM 调制解调器和可调功率放大器的 LoRa 模块，它具有高性能和可靠性
-- 370MHz-1200MHz, 最大20dBm (100mW)持续发射功率
-- 模块尺寸：25.0\*10.0\*4.3mm
+- Using **Sipeed-SPMOD** interface(2.54mm * 8PIN )，unified MaixPy board interface
+- Using SP-MOD SPI to communicate with LoRa module
+- LoRa module:The SP_LoRa module uses M-XL8 module with LoRaTM modem and LoRa module with adjustable power amplifier. It has high performance and reliability and is connected by SP_MOD.
+- 370MHz-1200MHz, Maximum 20dBm (100mW) continuous transmit power
+- Size:25.0\*10.0\*4.3mm
 
-### M-XL8 SX1276 LoRa 模块 介绍
+### M-XL8 SX1276 LoRa module Introduction
 
-| 功能特点： | 参数 |
+| Features： | --- |
 | --- | -- |
-| 工作频段 | 370MHz-1200Mhz |
-| 发射功率 | 20dBm（最大） |
-| 通信接口 | SPI |
-| 工作电压 | 1.8V~6.3V |
-| 工作温度 | -40℃ - 80℃ |
-| 天线 | 外置天线，IPEX或焊接 |
-| 接收灵敏度 | -148dbm |
-| RSSI动态范围 | 127dB |
-| 最大链路预算 | 168dB |
-| 收发状态电流 | 9.9mA |
-| 睡眠状态电流 | 50nA |
-| 调制方式 | FSK, GFSK, MSK, GMSK, LoRaTM及OOK |
-> 内置LoRaTM调制解调器，内置CRC，继承+12dBm可调PA+LNA
+| Working frequency | 370MHz-1200Mhz |
+| Transmission power | 20dBm(Maximum) |
+| Communication interface | SPI |
+| Supply voltage of external power supply | 1.8V~6.3V |
+| Range of working temperature | -40℃ - 80℃ |
+| antenna | external，IPEX |
+| Reception Sensitivity | -148dbm |
+| RSSI value | 127dB |
+| Maximum link budget | 168dB |
+| Send and receive status of current | 9.9mA |
+| Sleep status of current | 50nA |
+| Modulation method | FSK, GFSK, MSK, GMSK, LoRaTM及OOK |
+> Built-in LoRaTM modem, built-in CRC, inherited +12dBm adjustable PA+LNA
 
 
-###  SPMOD_lora 模块引脚定义：
+###  SPMOD_lora pin description:
 
-| 引脚序号  | 引脚名称 | 类型  | 引脚说明    |
+| Pin  | Name | Type  | Description    |
 | -------- | -------- | ---- | ---------- |
-| 1 | GND | G  | 模块电源地 |
-| 2 | CS | I/O | SPI片选引脚 |
-| 3 | SO | I/O | MISO数据引脚，主机输入从机输出 |
-| 4 | RST | I | 模块复位引脚，低有效 |
-| 5 | 3V3 | V | 模块电源输入正 |
-| 6 | SCK | I | SPI串行时钟引脚 |
-| 7 | SI | I/O | MOSI数据引脚，主机输出从机输入 |
-| 8 | IRQ | I | 连接至模块DIO0，可编程决定功能 |
+| 1 | GND | G  | Ground |
+| 2 | CS | I/O | Chip Select input pin |
+| 3 | SO | I/O | Master In Slave Out |
+| 4 | RST | I | Reset (active low) |
+| 5 | 3V3 | V | Power supply(3.3V) |
+| 6 | SCK | I | SPI clock pin|
+| 7 | SI | I/O | Master Out Slave In |
+| 8 | IRQ | I | Connected to DIO0 of the module,，Programmable decision function |
 
 <img src="../../assets/spmod/spmod_lora/back.png" width="300" />
 
-- 接线方式:
+- Mode of communication
 
 |   MCU:FUN(IO)   | SP_LCD |
 | :-------------: | :----: |
@@ -64,14 +64,14 @@ SPMOD_LoRa(LoRa 模块)采用 M-XL8 模块。
 
 <img src="../../assets/spmod/spmod_lora//connection.png" height="250">
 
-## 使用例程
+## Usage
 
-* 流程
+* Process
 
-  1. 创建 LoRa 对象并初始化
-  2. 发送或者接收数据
+  1. Create the LoRa object and initialize it
+  2. Send or receive data
 
-### C 示例：
+### C :
 
   ```c
 
@@ -101,7 +101,7 @@ SPMOD_LoRa(LoRa 模块)采用 M-XL8 模块。
 
   ```
 
-### MaixPy 例程：
+### MaixPy :
 
   ```python
 
@@ -128,16 +128,16 @@ SPMOD_LoRa(LoRa 模块)采用 M-XL8 模块。
 
   ```
 
-### 运行环境
+### Runtime environments:
 
-|  语言  |  开发板  |          SDK/固件版本          |
+|  Language  |  Board  | SDK/Firmware version |
 | :----: | :------: | :----------------------------: |
 |   C    | MaixCube | kendryte-standalone-sdk v0.5.6 |
 | MaixPy | MaixCube |         maixpy v0.5.1          |
 
-*MaixPy固件建议自行从最新源码编译*
+*The MaixPy firmware is recommended to compile from the latest source*
 
-### 运行结果
+### Result
 
 * C
 
@@ -151,9 +151,9 @@ SPMOD_LoRa(LoRa 模块)采用 M-XL8 模块。
 	  <img src="../../assets/spmod/spmod_lora/lora_send_log.png" height="250"/><img src="../../assets/spmod/spmod_lora/lora_recv_log.png" height="250"/>
   </center>
 
-### 移植
+### Transplant
 
-修改以下参数即可适配其他 K210 开发板.
+The following parameters need to be modified
 
 * C
 
@@ -189,26 +189,24 @@ SPMOD_LoRa(LoRa 模块)采用 M-XL8 模块。
     ##############################################
   ```
 
-## 参考设计
+## Outlook
 
-- SPMOD_LoRa 尺寸图：
+- SPMOD_LoRa Size drawing:
 
 <img src="../../assets/spmod/spmod_lora/sipeed_spmod_lora.png" height="250" />
 
 -----
 
-## 资源链接
+## Resource Link
 
-| 资源 | --- |
+| Resource | --- |
 | --- | --- |
-| 官网 | www.sipeed.com |
-| SIPEED 官方淘宝店 |[sipeed.taobao.com](sipeed.taobao.com) |
-|Github | [https://github.com/sipeed](https://github.com/sipeed) |
-|BBS | [http://bbs.sipeed.com](http://bbs.sipeed.com) |
-|MaixPy 文档官网 | [http://maixpy.sipeed.com](http://maixpy.sipeed.com) |
-|Sipeed 模型平台 | [https://maixhub.com](https://maixhub.com) |
-|SDK 相关信息 | [https://dl.sipeed.com/MAIX/SDK](https://dl.sipeed.com/MAIX/SDK) |
-|HDK 相关信息 | [https://dl.sipeed.com/MAIX/HDK](https://dl.sipeed.com/MAIX/HDK) |
-|E-mail(技术支持和商业合作) | [Support@sipeed.com](mailto:support@sipeed.com) |
-|telgram link | https://t.me/sipeed ||MaixPy AI QQ 交流群 | 878189804 |
-|MaixPy AI QQ 交流群(二群) | 1129095405 |
+| Website | www.sipeed.com |
+| Github | [https://github.com/sipeed](https://github.com/sipeed) |
+| BBS | [http://bbs.sipeed.com](http://bbs.sipeed.com) |
+| Wiki | [http://maixpy.sipeed.com](http://maixpy.sipeed.com) |
+| Sipeed model shop | [https://maixhub.com/](https://maixhub.com/) |
+| SDK Relevant information | [dl.sipeed.com/MAIX/SDK](dl.sipeed.com/MAIX/SDK) |
+| HDK Relevant information | [dl.sipeed.com/MAIX/HDK](dl.sipeed.com/MAIX/HDK) |
+| E-mail(Technical Support and Business Cooperation) | [Support@sipeed.com](mailto:support@sipeed.com) |
+| telgram link | [https://t.me/sipeed](https://t.me/sipeed) |

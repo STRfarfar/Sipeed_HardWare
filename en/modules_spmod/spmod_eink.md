@@ -1,53 +1,54 @@
 # SPMOD - Eink
 
 
-## 概述
+## Overview
 
 <img src="../../assets/spmod/spmod_eink/sp_eink.png" alt="XXX" style="zoom:40%;" />
 
-SPMOD_Eink(墨水屏模块)采用 GDEW0154M09 电子墨水屏。
+SPMOD_Eink(E-paper display module) uses GDEW0154M09 E-paper display.
 
-## SPMOD - Eink 介绍
+## SPMOD - Eink Introduction
 
-- 采用 **Sipeed-SPMOD** 接口(2.54mm * 8PIN 排针)，统一 MaixPy 开发板接口
-- 通过SP-MOD SPI接口与屏幕底板相连
-- 电子墨水屏：GDEW0154M09是一款1.54”，SPI接口控制，拥有24P FPC(0.5mm间距)接口的电子墨水屏。拥有超广可视角。
-- 支持 1 bit 黑/白显示
-- 分辨率：200x200
-- 模块尺寸：35*30*3.8mm
+- Using **Sipeed-SPMOD** interface(2.54mm * 8PIN )，unified MaixPy board interface
+- Connect to the screen through the SP-MOD SPI interface
+- E-paper display module：GDEW0154M09 is a 1.54" E-paper display，with SPI interface，and has 24P FPC(0.5mm pitch).
+- Support 1 bit Black/Write full display capabilities
+- Display Resolution：200x200
+- Size：35*30*3.8mm
 
-### GDEW0154M09 电子墨水屏介绍
+### GDEW0154M09 E-paper display Introduction
 
-| 功能特点： | 参数 |
+| Features： | --- |
 | --- | -- |
-| 工作电压 | 2.3V~3.6V |
-| 工作电流 | 1~3mA |
-| 工作温度范围 | -40℃~85℃ |
-| 休眠电流 | <5uA |
-| 屏幕大小 | 1.54英寸 |
-| 有效显示区域 | 27.6mm | 27.6mm |
-| 分辨率 | 200*200 |
-| 色彩 | 1 bit 黑/白显示 |
-| 对外接口 | 24P FPC (0.5mm间距) |
-> 内部集成电路包含门缓冲器、源缓冲器，接口，时序控制逻辑，振荡器，DC-DC，SRAM，LUT，VCOM
+| Supply voltage of external power supply | 2.3V~3.6V |
+| Supply current of external power supply | 1~3mA |
+| Range of working temperature | -40℃~85℃ |
+| Sleep Status of Current | <5uA |
+| Screen Size | 1.54 inch |
+| Active Area | 27.6mm*27.6mm |
+| Display Resolution | 200*200 |
+| Color | 1 bit Black/Write full display capabilities|
+| interface | 24P FPC (0.5mm pitch) |
+> An integrated circuit contains gate buffer, source buffer, interface, timing control logic, oscillator,
+DC-DC, SRAM, LUT, VCOM, and border are supplied with each panel.
 
 
-###  SPMOD_Eink 模块引脚定义：
+###  SPMOD_Eink pin description ：
 
-| 引脚序号 | 引脚名称 | 类型 | 引脚说明 |
+| Pin | Name | Type | Description |
 | -------- | -------- | ---- | --- |
-| 1 | GND | G | 模块电源地 |
-| 2 | CS | I | SPI片选引脚 |
-| 3 | D/C | I | 数据/命令输入切换引脚 |
-| 4 | RES | I |  模块复位引脚，低有效 |
-| 5 | 3V3 | V | 模块电源输入正 |
-| 6 | SCK | I |SPI串行时钟引脚 |
-| 7 | SI | I/O | MOSI数据引脚，主机输出从机输入 |
-| 8 | BSY | O | BUSY状态输出引脚 |
+| 1 | GND | G | Ground |
+| 2 | CS | I | Chip Select input pin |
+| 3 | D/C | I | Data/Command control pin |
+| 4 | RES | I | Reset (active low) |
+| 5 | 3V3 | V | Power supply(3.3V) |
+| 6 | SCK | I |  SPI clock pin |
+| 7 | SI | I/O | Master Out Slave In |
+| 8 | BSY | O | Busy status output pin |
 
 <img src="../../assets/spmod/spmod_eink/sp_eink_back.png" height="300" />
 
-- 接线方式：
+- Mode of connection:：
 
 |  MCU:FUN(IO)   | SP_Eink |
 | :------------: | :-----: |
@@ -62,25 +63,27 @@ SPMOD_Eink(墨水屏模块)采用 GDEW0154M09 电子墨水屏。
 
 <img src="../../assets/spmod/spmod_eink/connection.png" height="250">
 
-### 基本指令列表
+### AT instruction list
 
-| 指令  |       功能       |
-| :---: | :--------------: |
-| 0x10  | 开始发送黑白图像 |
-| 0x13  | 开始发送红白图像 |
-| 0x12  |  刷新图像到屏幕  |
+| Instruction |       description        |
+| :---------: | :----------------------: |
+|    0x10     | start transport b/w data |
+|    0x13     | start transport r/w data |
+|    0x12     |  refresh data to screen  |
 
-*更多指令信息参考[GDEW0154M09.pdf](https://cn.dl.sipeed.com/shareURL/MAIX/HDK/sp_mod/sp_eink)*
 
-## 使用例程
+*See [GDEW0154M09.pdf](https://cn.dl.sipeed.com/shareURL/MAIX/HDK/sp_mod/sp_eink) for more information*
 
-* 流程
+## Usage
 
-  1. 初始化配置
-  2. 创建 Image 并填充
-  3. 发送图像并刷新
+* Process
 
-### C 示例：
+  1.initializatin
+  2.create an image and fill it
+  3.send image and refresh
+
+
+### C：
 
   ```c
 
@@ -119,7 +122,7 @@ SPMOD_Eink(墨水屏模块)采用 GDEW0154M09 电子墨水屏。
 
   ```
 
-### MaixPy 例程：
+### MaixPy：
 
   ```python
 
@@ -147,16 +150,16 @@ SPMOD_Eink(墨水屏模块)采用 GDEW0154M09 电子墨水屏。
 
   ```
 
-### 运行环境
+### Runtime environments:
 
-|  语言  |  开发板  |          SDK/固件版本          |
+|  Language  |  Board  | SDK/Firmware version |
 | :----: | :------: | :----------------------------: |
 |   C    | MaixCube | kendryte-standalone-sdk v0.5.6 |
 | MaixPy | MaixCube |         maixpy v0.5.1          |
 
-*MaixPy固件建议自行从最新源码编译*
+*The MaixPy firmware is recommended to compile from the latest source*
 
-### 运行结果
+### Result
 
 * C
 
@@ -166,9 +169,9 @@ SPMOD_Eink(墨水屏模块)采用 GDEW0154M09 电子墨水屏。
 
   <img src="../../assets/spmod/spmod_eink/sp_eink_py.png" height="250" />
 
-### 移植
+### Transplant
 
-修改以下参数即可
+The following parameters need to be modified
 
 * C
 
@@ -206,29 +209,27 @@ SPMOD_Eink(墨水屏模块)采用 GDEW0154M09 电子墨水屏。
   ##############################################
 
 
-## 参考设计
+## Outlook
 
-- SPMOD_Eink 尺寸图：
+- SPMOD_Eink Size drawing:
 
 <img src="../../assets/spmod/spmod_eink/sipeed_spmod_eink.png" height="250" />
 
 
 -----
 
-## 资源链接
+## Resource Link
 
-| 资源 | --- |
+| Resource | --- |
 | --- | --- |
-| 官网 | www.sipeed.com |
-| SIPEED 官方淘宝店 |[sipeed.taobao.com](sipeed.taobao.com) |
-|Github | [https://github.com/sipeed](https://github.com/sipeed) |
-|BBS | [http://bbs.sipeed.com](http://bbs.sipeed.com) |
-|MaixPy 文档官网 | [http://maixpy.sipeed.com](http://maixpy.sipeed.com) |
-|Sipeed 模型平台 | [https://maixhub.com](https://maixhub.com) |
-|SDK 相关信息 | [https://dl.sipeed.com/MAIX/SDK](https://dl.sipeed.com/MAIX/SDK) |
-|HDK 相关信息 | [https://dl.sipeed.com/MAIX/HDK](https://dl.sipeed.com/MAIX/HDK) |
-|E-mail(技术支持和商业合作) | [Support@sipeed.com](mailto:support@sipeed.com) |
-|telgram link | https://t.me/sipeed ||MaixPy AI QQ 交流群 | 878189804 |
-|MaixPy AI QQ 交流群(二群) | 1129095405 |
+| Website | www.sipeed.com |
+| Github | [https://github.com/sipeed](https://github.com/sipeed) |
+| BBS | [http://bbs.sipeed.com](http://bbs.sipeed.com) |
+| Wiki | [http://maixpy.sipeed.com](http://maixpy.sipeed.com) |
+| Sipeed model shop | [https://maixhub.com/](https://maixhub.com/) |
+| SDK Relevant information | [dl.sipeed.com/MAIX/SDK](dl.sipeed.com/MAIX/SDK) |
+| HDK Relevant information | [dl.sipeed.com/MAIX/HDK](dl.sipeed.com/MAIX/HDK) |
+| E-mail(Technical Support and Business Cooperation) | [Support@sipeed.com](mailto:support@sipeed.com) |
+| telgram link | [https://t.me/sipeed](https://t.me/sipeed)  |
 
 

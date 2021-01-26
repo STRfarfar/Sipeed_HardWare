@@ -1,6 +1,6 @@
 # Sipeed HardWare WIKI
 
-[English|[中文](./README_zh.md)]
+[English|[中文](./README.md)]
 
 ## K210 Mocules
 
@@ -58,20 +58,26 @@ LicheePi Zero
 * [Grove Module]()
     - [Grove-RGB LED]()
 * [SP-MOD Module]()
-    - [SP-TOF-1P]()
-    - [SP-LCD 1.14]()
-    - [SP-MicArray]()
-    - [SP-Weather]()
-    - [SP-JoyStick]()
-    - [SP-LoRa]()
-    - [SP-Servo]()
-    - [SP-RFID]()
-    - [SP-BLE]()
-    - [SP-elink]()
-    - [SP-PSRAM]()
-    - [SP-elink]()
-    - [SP-Ethernet]()
-
+    - Adapter
+      - [SP-Extender](./en/modules_spmod/spmod_extender.md)
+      - [SP-Grove](./en/modules_spmod/spmod_grove.md)
+      - [SP-FPC](./en/modules_spmod/spmod_fpc.md)
+      - [SP-MicArray](./en/modules_spmod/spmod_micarray.md)
+      - [SP-JoyStick](./en/modules_spmod/spmod_joystick.md)
+      - [SP-Servo](./en/modules_spmod/spmod_servo.md)
+      - [SP-Type-C]()
+    - Sensor
+      - [SP-Weather](./en/modules_spmod/spmod_weather.md)
+      - [SP-TOF-1P](./en/modules_spmod/spmod_tof.md)
+    - Communication
+      - [SP-BLE](./en/modules_spmod/spmod_bt.md)
+      - [SP-LoRa](./en/modules_spmod/spmod_lora.md)
+      - [SP-PSRAM](./en/modules_spmod/spmod_psram.md)
+      - [SP-RFID](./en/modules_spmod/spmod_rfid.md)
+      - [SP-Ethernet](./en/modules_spmod/spmod_ethernet.md)
+    - Display
+      - [SP-LCD 1.14](./en/modules_spmod/spmod_lcd1.14.md)
+      - [SP-Eink](./en/modules_spmod/spmod_eink.md)
 
 
 ## Module && Debugger
