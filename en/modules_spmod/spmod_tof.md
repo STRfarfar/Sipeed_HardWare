@@ -31,8 +31,8 @@ SPMOD_TOF(TOF module) uses VL53L0X .
 
 ###  SPMOD_TOF pin description:
 
-| Pin | Name | Type | Description |                                                  |
-| -------- | -------- | ---- | --- |
+| Pin | Name | Type | Description | |
+| --- | --- | --- | --- | --- |
 | 1 | GND | G  | Ground |
 | 2 | IRQ | I  | Interrupt input pin, connected to GPIO1 of VL53L0X |
 | 3 | NC  | NC | Not connected |
@@ -132,7 +132,7 @@ SPMOD_TOF(TOF module) uses VL53L0X .
 
 * MaixPy
 
-  <img src="../../assets/spmod/spmod_tof/maixpy_log.png" height="200" />
+  - [None]
 
 ## Transplant
 

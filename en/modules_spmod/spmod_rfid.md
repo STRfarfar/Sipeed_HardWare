@@ -44,8 +44,8 @@ Supports non-contact reader mode in accordance with ISO/IEC 14443 protocol,
 ###  SPMOD_RFID pin description:
 
 
-| Pin | Name | Type | Description |                                                     |
-| -------- | -------- | ---- | --------- |
+| Pin | Name | Type | Description | |
+| --- | --- | --- | --- | --- |
 | 1 | GND | G | Ground |
 | 2 | CS | I | Chip Select input pin |
 | 3 | SO | I/O | Master In Slave Out  |
@@ -61,14 +61,14 @@ Supports non-contact reader mode in accordance with ISO/IEC 14443 protocol,
 
 |   MCU:FUN(IO)   | SP_RFID |
 | :-------------: | :-----: |
-|    NC(IO_7)     |   NPD   |
+| NC(IO_7)     |   NPD   |
 | SPI:MISO(IO_15) |   SO    |
 | SPI:SS0(IO_20)  |   CS    |
 | SPI:SCK(IO_21)  |   SCK   |
 | SPI:MOSI(IO_8)  |   SI    |
-|  NC(IO_6)    |   IRQ   |
-|  2.2~3.6V    |  3.3V   |
-|  GND       |   GND   |
+| NC(IO_6)    |   IRQ   |
+| 2.2~3.6V    |  3.3V   |
+| GND       |   GND   |
 
 <img src="../../assets/spmod/spmod_rfid/connection.png" height="250">
 

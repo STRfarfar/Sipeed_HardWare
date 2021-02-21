@@ -135,8 +135,7 @@ SPMOD_TOF(TOF 模块) 采用 VL53L0X 模块。
 
 * MaixPy
 
-  <img src="../../assets/spmod/spmod_tof/maixpy_log.png" height="200" />
-
+  - [None]
 ## 移植
 
 修改以下参数即可适配其他 K210 开发板.

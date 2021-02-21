@@ -1,45 +1,44 @@
-# MF 人脸识别模块 MF1
+# MF Face recognition module MF1
 
-## **修改记录**
+## **Modification Record**
 
-|版本|时间|修改内容|
+|Version|Time|Modified content|
 |-|-|-|
-|1.0|2019.07.30|初始版本|
+|1.0|2019.07.30|Initial version|
 |1.2|2020.08.1| |
 
-## 目录
+## table of Contents
 
-- [**硬件资源简介**](#硬件资源简介)
-- [**功能简介**](#功能简介)
-    - [模块特性](#模块特性)
-    - [使用说明](#使用说明)
-- [**应用方案**](#应用方案)
-    - [串口模块](#串口模块)
-    <!-- - [微信小程序模块](#微信小程序模块) -->
-    <!-- - [二次开发](#二次开发) -->
-<!-- - [**Q&A**](#qa) -->
+-[**Introduction to hardware resources**](#Introduction to hardware resources)
+-[**Function Introduction**](#Function Introduction)
+    -[Module Features](#Module Features)
+    -[Instructions for use](#Instructions for use)
+-[**Application plan**](#Application plan)
+    -[Serial Module](#Serial Module)
+    <!---[WeChat Mini Program Module](#微信小程序 Module) -->
+    <!---[Second Development](#Second Development) -->
+<!---[**Q&A**](#qa) -->
 
 
-## **硬件资源简介**
+## **Introduction to Hardware Resources**
 
 <center class="half">
 <img src="../../assests/front.png" width = 50% /><img src="assests/bottom.jpg" width = 50% />
 </center>
 
-* CPU : **RISC-V** 双核 64bit、内置FPU、频率 400Mhz-500Mhz
-* 图像识别：活体识别
-* 双摄像头：红外+可见光
-* 红外填充光：3W红外发光二极管
-* 显示器：1.33英寸TFT、分辨率240*320显示屏
-* 其他外设：电容触摸按钮/支持3W扬声器/MEMS麦克风/SD NAND/RGB LED
-* 无线功能(可选) : 支持 2.4G 802.11.b/g/n、SPI 连接
+* CPU: **RISC-V** dual-core 64bit, built-in FPU, frequency 400Mhz-500Mhz
+* Image recognition: living body recognition
+* Dual cameras: infrared + visible light
+* Infrared filling light: 3W infrared light emitting diode
+* Display: 1.33 inches TFT, resolution 240*320 display
+* Other peripherals: capacitive touch button/support 3W speaker/MEMS microphone/SD NAND/RGB LED
+* Wireless function (optional): Support 2.4G 802.11.b/g/n, SPI connection
 
-* [淘宝购买](https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-21231188695.25.27ba52b1bsusf7&id=599138281058)
+* [Buy on Taobao](https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-21231188695.25.27ba52b1bsusf7&id=599138281058)
 
 <div STYLE="page-break-after: always;"></div>
 
-## **功能简介**
+## **Function Introduction**
 
 
-![image-20200806105515925](../../assets/mf_module/mf1/image-20200806105515925.png)
-![image-20200806105515925](../../assets/mf_module/mf1/Snipaste_2020-08-06_16-32-28.png)
+![MF1 pin map](../../assets/mf_module/mf1/mf1_pin_map.png)
