@@ -35,15 +35,15 @@ MF0 face recognition module appearance at a glance
 
 ### Module features:
 
--CPU: RISC-V 64bit dual-core processor, 400Mhz standard frequency (overclockable)
--Image recognition: QVGA@60FPS/VGA@30FPS
--Deep learning framework: TensorFlow/Keras/Darknet
--Peripherals: FPIOA, UART, GPIO, SPI, I²C, I²S, WDT, TIMER, etc
--2.54mm pitch DIP/SMT pad
--Can be connected to a breadboard
--Onboard camera connector
--ROM: 4MByte
--RAM: 6MByte (General purpose) + 2MByte (KPU dedicated)
+- CPU: RISC-V 64bit dual-core processor, 400Mhz standard frequency (overclockable)
+- Image recognition: QVGA@60FPS/VGA@30FPS
+- Deep learning framework: TensorFlow/Keras/Darknet
+- Peripherals: FPIOA, UART, GPIO, SPI, I²C, I²S, WDT, TIMER, etc
+- 2.54mm pitch DIP/SMT pad
+- Can be connected to a breadboard
+- Onboard camera connector
+- ROM: 4MByte
+- RAM: 6MByte (General purpose) + 2MByte (KPU dedicated)
 
 ### Hardware pin
 

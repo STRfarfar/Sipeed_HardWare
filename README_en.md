@@ -4,14 +4,14 @@
 
 ## K210 Mocules
 
-* [K210 Mocules](./core_modules/k210_core_modules.md)
-    - [M1/M1w](./core_modules/k210_core_modules.md)
-    - [M1n](./core_modules/k210_core_modules.md)
+* [K210 Mocules](./en/core_modules/k210_core_modules.md)
+    - [M1/M1w](./en/core_modules/k210_core_modules.md)
+    - [M1n](./en/core_modules/k210_core_modules.md)
 
 
 ## MF face recognition module
 
-* [MF face recognition module]()
+* [MF face recognition module]
   - [MF0 && MF0 Dock](./en/mf_ml_module/mf0_ml_module.md)
   - [MF1 && MF2](./en/mf_ml_module/mf1_ml_module.md)
   - [MF4 && MF5](./en/mf_ml_module/mf5_product.md)
