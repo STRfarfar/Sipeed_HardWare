@@ -19,11 +19,11 @@ In the process of using the **MF face recognition module**, if there is a firmwa
 
 > After getting the MF module, the general developer does not need to care about the resource distribution
 
--MF firmware description
+MF firmware description
 
-VIS: Visible light (VIS)
+- VIS: Visible light (VIS)
 
-IR: infrared light (IR)
+- IR: infrared light (IR)
 
 | Firmware classification | Direction | Protocol | Identification method | wechat | Number of firmware types |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -47,23 +47,22 @@ Before upgrading and restoring the factory configuration **MF face recognition m
 
 **Hardware preparation:**
 
- -**MF Face Recognition Module**
+ - **MF Face Recognition Module**
 
- -USB Type-C data cable
+ - USB Type-C data cable
 
 
 **Software preparation:**
 
-  -Burning software: kflash_gui (Kflash_gui v1.6.5 version is used here)
+  - Burning software: kflash_gui (Kflash_gui v1.6.5 version is used here)
 
-  Download link:
+  **Download link:**
 
   - Github: [kflash_gui](https://github.com/Sipeed/kflash_gui)
 
   - Sipeed: [Sipeed official download site-kflash_gui](https://dl.sipeed.com/MAIX/tools/kflash_gui/kflash_gui_v1.6.5)
 
-  -Burn resource files (burn according to the situation): **MF face recognition module firmware**, algorithm model files, font resource files, image resource files
-
+  - Burn resource files (burn according to the situation): **MF face recognition module firmware**, algorithm model files, font resource files, image resource files
 
   Get the resource files and send a unified email to: Email: Support@sipeed.com
 
