@@ -43,8 +43,8 @@ SPMOD_MicArray(麦克风阵列模块)采用 RY3708(DC-DC)升压模块
 | 8 | D1 | I | Mic_BCK |
 | 9 | CK | I | LED控制串行时钟引脚 (相当于I2C SCL) |
 | 10 | DA | I |  LED控制串行数据引脚 (相当于I2C SDA) |
-<img src="" width="300" />
 
+<img src="" width="300" />
 
 ## 使用例程
 

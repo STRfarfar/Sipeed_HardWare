@@ -120,10 +120,10 @@ SPMOD - Weather (气象站模块), 集成三轴传感器 QMC7983,与温湿度气
 
 ## 运行环境
 
-|  语言  |  开发板  | SDK/固件版本                   |
-| :----: | :------: | :----------------------------- |
+|  语言  |  开发板  | SDK/固件版本 |
+| :----: | :------: | :--- |
 |   C    | MaixCube | kendryte-standalone-sdk v0.5.6 |
-| MaixPy | MaixCube | maixpy v0.5.1                  |
+| MaixPy | MaixCube | maixpy v0.5.1 |
 
 ## 运行结果
 
