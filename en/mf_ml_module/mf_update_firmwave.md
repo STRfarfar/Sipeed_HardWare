@@ -21,16 +21,20 @@ In the process of using the **MF face recognition module**, if there is a firmwa
 
 -MF firmware description
 
+VIS: Visible light (VIS)
+
+IR: infrared light (IR)
+
 | Firmware classification | Direction | Protocol | Identification method | wechat | Number of firmware types |
-| --------------- | ---------- | -------- | -------- | ---- - | ------------ |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | MF0 trial version module | horizontal version, vertical version | bin | vis | | 2 |
 | MF1 offline module | horizontal and vertical | bin/json | vis+ir | | 8 |
 | MF2 WeChat semi-finished product | Horizontal version, vertical version | bin | vis | Support | 2 |
 | MF4 WeChat (finished product) | Vertical version | bin | vis | Support | 1 |
 | MF5 WeChat (finished product) | Vertical version | bin/json | vis | Support | 2 |
 
--Font resources
--Picture resources
+- Font resources
+- Picture resources
 
 
 ## MF firmware burning (upgrade, restore factory configuration) steps
@@ -52,24 +56,26 @@ Before upgrading and restoring the factory configuration **MF face recognition m
 
   -Burning software: kflash_gui (Kflash_gui v1.6.5 version is used here)
 
-    Download link:
-    -Github: [kflash_gui](https://github.com/Sipeed/kflash_gui)
-    -Sipeed: [Sipeed official download site-kflash_gui](https://dl.sipeed.com/MAIX/tools/kflash_gui/kflash_gui_v1.6.5)
+  Download link:
+
+  - Github: [kflash_gui](https://github.com/Sipeed/kflash_gui)
+
+  - Sipeed: [Sipeed official download site-kflash_gui](https://dl.sipeed.com/MAIX/tools/kflash_gui/kflash_gui_v1.6.5)
 
   -Burn resource files (burn according to the situation): **MF face recognition module firmware**, algorithm model files, font resource files, image resource files
 
 
-    Get the resource files and send a unified email to: Email: Support@sipeed.com
+  Get the resource files and send a unified email to: Email: Support@sipeed.com
 
-      The recommended email format is as follows:
+  The recommended email format is as follows:
 
-      > Problem type: [MF firmware resource acquisition]
-      >
-      > Use hardware/firmware version: [MF0/MF1/MF2/MF4/MF5]
-      >
-      > Content: [Get the latest firmware/Firmware is missing/Model is missing (describe the relevant situation)]
-      >
-      > Machine code: [xxxxxxxxxxxxxxxxxxxxx (only required when the model is lost)]
+  > Problem type: [MF firmware resource acquisition]
+  >
+  > Use hardware/firmware version: [MF0/MF1/MF2/MF4/MF5]
+  >
+  > Content: [Get the latest firmware/Firmware is missing/Model is missing (describe the relevant situation)]
+  >
+  > Machine code: [xxxxxxxxxxxxxxxxxxxxx (only required when the model is lost)]
 
 
 ### Burn firmware, resource files
